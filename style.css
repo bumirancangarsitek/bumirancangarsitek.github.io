@@ -1,0 +1,315 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: white;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #27ae60;
+}
+
+/* Hero Section - Tambahan background rumah American */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80') no-repeat center center/cover;
+    color: #fff;
+    padding: 5rem 1rem;
+    text-align: center;
+    margin-top: 70px;
+    height: 100vh; /* Opsional: Buat hero penuh tinggi layar untuk efek lebih dramatis */
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fff;
+    color: #27ae60;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #ecf0f1;
+}
+
+/* Services */
+.services {
+    padding: 3rem 1rem;
+    background-color: #fff;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service h3 {
+    margin-bottom: 1rem;
+    color: #27ae60;
+}
+
+.service p {
+    color: #333;
+}
+
+/* Portfolio */
+.portfolio {
+    padding: 3rem 1rem;
+    background-color: #f4f4f4;
+}
+
+.portfolio h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s; /* Tambahan: efek hover */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Tambahan: efek zoom kecil saat hover */
+}
+
+/* Modal overlay untuk memperbesar gambar */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%; /* Maksimal 90% lebar layar */
+    max-height: 90%; /* Maksimal 90% tinggi layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Pertahankan rasio aspek tanpa crop */
+    border-radius: 8px; /* Opsional: sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Opsional: bayangan untuk efek */
+}
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn:hover {
+    background: #f0f0f0;
+}
+
+/* About */
+.about {
+    padding: 3rem 1rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.about h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-style: italic;
+    color: #333;
+}
+
+/* Contact */
+.contact {
+    padding: 3rem 1rem;
+    background-color: #f4f4f4;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #333;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    color: #333;
+}
+
+.contact button {
+    padding: 0.75rem;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.contact button:hover {
+    background-color: #229954;
+}
+
+.contact p {
+    text-align: center;
+    margin-top: 2rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsivitas */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 1rem;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .modal-content {
+        max-width: 95%;
+        max-height: 95%;
+    }
+    #modalImage {
+        width: 100%;
+        height: auto;
+    }
+}
